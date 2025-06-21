@@ -112,9 +112,9 @@ syntax: `npm run {script-name} {startTimestamp} {endTimestamp} {bridgeName}`
 
 Example: 
 ```
-npm run adapter arbitrum 1704690402 1704949602
-npm run aggregate arbitrum 1704690402 1704949602
-npm run daily-volume arbitrum 1704690402 1704949602 
+npm run adapter 1704690402 1704949602 arbitrum
+npm run aggregate 1704690402 1704949602 arbitrum
+npm run daily-volume 1704690402 1704949602 arbitrum
 ```
 Returns: 
 ```
@@ -143,6 +143,17 @@ Example:
 {CHAIN}_RPC=url1,url2...
 ETHEREUM_RPC=https://eth.llamarpc.com
 ```
+
+## If running in WSL Ubuntu container (for Windows):
+
+1) Install WSL (Ubuntu) from Microsoft's website
+2) Make sure Docker is installed and "WSL Integration" settings are checked
+3) Run Ubuntu. Set-up if needed.
+4) Setup the Docker Container in the Ubuntu Terminal using step above
+
+Note: Check you have permissions for your container before running `npm i` with `chown`, otherwise you will see errors.
+
+`user@device:~/bridges-server$ sudo chown -R user:user ~/bridges-server`
 
 
 ### Testing 
